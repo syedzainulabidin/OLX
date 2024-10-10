@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, Helvetica, sans-serif;
+  transition: .3s ease;
 }
 
 .main {
@@ -51,13 +52,67 @@
   flex-grow: 1;
   width: 10%;
 
-  select {
+  .for-input{
     width: 100%;
     height: 80%;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    
+    input{
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      border: none;
+      outline: none;
+    }
+
+    
+    svg{
+      margin: 0px 10px;
+    }
+    
+    .arrow-down{
+      size: 150px;
+    }
+  }
+  
+  .for-input:focus-within{
+    border: 1.4px solid #17e8ff;
+  }
+  .for-input:focus-within .arrowdown{
+    transform: rotate(180deg);
+  }
+
+  .for-input:focus-within .options{
+    display: block;
+  }
+  
+  .options {
+    display: none;
+    background: white;
+    width: 100%;
+    position: relative;
+    height: 200px;
     font-size: 16px;
     border: 1px solid #d6d6d6;
     border-radius: 4px;
+    overflow-y: scroll;
+    hr{
+      border: none;            /* Remove default border */
+      height: 1px;              /* Set the height of the line */
+      background-color: #d6d6d6;  
+    }
+    option{
+      padding: 15px;
+      font-size: 14px;
+    }
   }
+}
+
+.dropdown:focus-within .options{
+  display: block;
 }
 
 .sec2 > .input {
@@ -101,18 +156,23 @@
     width: 50%;
     height: 70%;
     margin: 5px;
-    border: 5px solid;
-    border-image: linear-gradient(45deg, #ffd300, #00e6e6, #1e90ff) 1;
+    background: transparent;
+    border: none;
     font-size: 15px;
-    border-radius: 50px;
+    .text{
+      font-weight: bold;
+      position: relative;
+      top: -35px;
+    }
   }
 }
 
 .btn > button:first-child {
+  background: rgba(255, 255, 255, 0.658);
   text-decoration: 2px underline #002f34;
   font-weight: bold;
+  border-radius: 100px;
   text-underline-offset: 4px;
-  border: none;
 }
 
 .header {
