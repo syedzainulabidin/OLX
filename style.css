@@ -106,8 +106,8 @@
     border-radius: 4px;
     overflow-y: scroll;
     hr {
-      border: none; /* Remove default border */
-      height: 1px; /* Set the height of the line */
+      border: none;
+      height: 1px;
       background-color: #d6d6d6;
     }
     option {
@@ -198,7 +198,6 @@
   padding: 0 2.5%;
   width: 100%;
   border-top: 1px solid #d6d6d6;
-  /* margin-top: 10px; */
 }
 
 .container > .category {
@@ -242,7 +241,6 @@
   div {
     width: 88px;
     height: 88px;
-    /* margin: 10px; */
     display: grid;
     place-items: center;
     font-weight: bold;
@@ -365,7 +363,6 @@
   width: 10%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
 }
 
@@ -416,7 +413,6 @@ footer {
 .footerStuff {
   padding: 30px;
   min-width: 20%;
-  /* width: 320px; */
 }
 
 .footerStuff > h2 {
